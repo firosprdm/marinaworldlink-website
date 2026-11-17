@@ -1,0 +1,1055 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Marina WorldLink Co. | Engineering Trust in KSA</title>
+<meta name="description" content="Marina WorldLink Co. - An ISO-certified Saudi contractor integrating MEP, Civil, Fit-out, Firefighting, HVAC, CCTV, IT, Cleaning, and AMC services.">
+<link rel="icon" href="https://z-cdn-media.chatglm.cn/files/f53a0923-869a-4506-8077-a7d4411b00bc.png?auth_key=1884275750-99b00db208094c7c8a84fec04a2594da-0-ea27a0d4652ebd750c7ed6bc12a9f355">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;500;600;700;800;900&family=Manrope:wght@200;300;400;500;600;700;800&family=Cairo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+  :root {
+    --bg: #050810;
+    --bg-2: #080c18;
+    --card: #0f1424;
+    --fg: #f8fafc;
+    --muted: #94a3b8;
+    --accent: #8b5cf6;
+    --accent-2: #a78bfa;
+    --blue: #3b82f6;
+    --pink: #ec4899;
+    --border: rgba(139, 92, 246, 0.3);
+    --border-2: rgba(255, 255, 255, 0.08);
+  }
+  * { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Manrope', sans-serif; background: var(--bg); color: var(--fg); overflow-x: hidden; line-height: 1.6; transition: background 0.3s; }
+  body.rtl { font-family: 'Cairo', sans-serif; }
+  .font-display { font-family: 'Unbounded', sans-serif; letter-spacing: -0.025em; }
+  body.rtl .font-display { font-family: 'Cairo', sans-serif; letter-spacing: 0; font-weight: 800; }
+  ::-webkit-scrollbar { width: 8px; height: 8px; }
+  ::-webkit-scrollbar-track { background: var(--bg); }
+  ::-webkit-scrollbar-thumb { background: linear-gradient(var(--accent), var(--blue)); border-radius: 10px; }
+  ::selection { background: var(--accent); color: #fff; }
+
+  /* Glass UI System */
+  .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid rgba(255, 255, 255, 0.08); }
+  .glass-nav { background: rgba(8, 12, 24, 0.7); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid rgba(255, 255, 255, 0.05); }
+  .glass-card { background: rgba(15, 20, 36, 0.6); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.06); transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1); }
+  .glass-card:hover { background: rgba(255, 255, 255, 0.05); border-color: var(--border); transform: translateY(-5px); box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3); }
+
+  .text-brand-gradient { background: linear-gradient(135deg, #a78bfa 0%, #8b5cf6 50%, #3b82f6 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+  .blob { position: absolute; border-radius: 50%; filter: blur(80px); opacity: 0.4; pointer-events: none; z-index: 1; }
+
+  /* Hero Scroll Storytelling */
+  .hero-wrap { height: 600vh; position: relative; }
+  .hero-sticky { position: sticky; top: 0; height: 100vh; overflow: hidden; }
+  
+  /* Double Buffer Backgrounds */
+  .hero-bg { position: absolute; inset: 0; z-index: 0; will-change: transform; }
+  .hero-bg img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: opacity 1s ease-in-out; }
+  .hero-bg::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(5,8,16,0.75) 0%, rgba(5,8,16,0.85) 60%, rgba(5,8,16,1) 100%); z-index: 2; }
+  
+  .hero-frame { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.8s ease; pointer-events: none; z-index: 10; }
+  .hero-frame.active { opacity: 1; pointer-events: all; }
+  .hero-frame.active .hero-content-inner { transform: translateY(0); opacity: 1; }
+  .hero-content-inner { transform: translateY(40px); opacity: 0; transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1); transition-delay: 0.2s; text-align: center; max-width: 800px; padding: 0 20px; }
+
+  /* Futuristic Elements */
+  .futuristic-ring { position: absolute; border-radius: 50%; border: 1px solid rgba(139, 92, 246, 0.15); pointer-events: none; }
+  @keyframes spin-slow { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+  @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+  .icon-anim { animation: float 3s ease-in-out infinite; }
+
+  /* Navigation */
+  .nav-link { position: relative; padding: 8px 16px; border-radius: 8px; transition: all 0.3s; font-weight: 500; }
+  .nav-link:hover { color: var(--accent-2); background: rgba(255,255,255,0.03); }
+  .nav-link.active { color: #fff; background: rgba(139, 92, 246, 0.15); box-shadow: 0 4px 15px rgba(139, 92, 246, 0.15); }
+
+  /* Mobile Menu */
+  .mobile-menu { position: fixed; inset: 0; background: rgba(5, 8, 16, 0.98); backdrop-filter: blur(20px); z-index: 70; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1.5rem; opacity: 0; pointer-events: none; transition: opacity 0.4s; }
+  .mobile-menu.active { opacity: 1; pointer-events: all; }
+  .mobile-link { font-family: 'Unbounded', sans-serif; font-size: 1.5rem; font-weight: 700; color: var(--fg); transition: color 0.3s; }
+  body.rtl .mobile-link { font-family: 'Cairo', sans-serif; }
+  .mobile-link:hover { color: var(--accent-2); }
+
+  /* Buttons */
+  .btn-primary { background: linear-gradient(135deg, var(--accent), var(--blue)); color: #fff; font-weight: 700; transition: all 0.3s; box-shadow: 0 4px 20px rgba(139, 92, 246, 0.3); }
+  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(139, 92, 246, 0.5); }
+  .btn-ghost { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: var(--fg); transition: all 0.3s; }
+  .btn-ghost:hover { background: rgba(255,255,255,0.1); border-color: var(--accent); }
+
+  /* Sections & Reveal */
+  .section-label { display: inline-flex; align-items: center; gap: 8px; padding: 6px 14px; border: 1px solid var(--border); border-radius: 100px; font-size: 12px; font-weight: 600; color: var(--accent-2); text-transform: uppercase; letter-spacing: 0.15em; background: rgba(139,92,246,0.05); }
+  .reveal { opacity: 0; transform: translateY(40px); transition: opacity 0.8s, transform 0.8s; }
+  .reveal.in-view { opacity: 1; transform: translateY(0); }
+  .feature-line::before { content: ''; position: absolute; left: 0; top: 8px; width: 8px; height: 8px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 12px var(--accent); }
+  body.rtl .feature-line::before { left: auto; right: 0; }
+  body.rtl .feature-line { padding-right: 1.25rem; padding-left: 0; }
+
+  /* Social Icons - Original Colors */
+  .social-icon { width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; border-radius: 12px; transition: all 0.3s; font-size: 18px; }
+  .social-linkedin { color: #0A66C2; background: rgba(10, 102, 194, 0.1); }
+  .social-linkedin:hover { background: #0A66C2; color: #fff; transform: translateY(-3px); }
+  .social-twitter { color: #fff; background: rgba(255, 255, 255, 0.1); }
+  .social-twitter:hover { background: #000; color: #fff; transform: translateY(-3px); }
+  .social-instagram { color: #E1306C; background: rgba(225, 48, 108, 0.1); }
+  .social-instagram:hover { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); color: #fff; transform: translateY(-3px); }
+  .social-facebook { color: #1877F2; background: rgba(24, 119, 242, 0.1); }
+  .social-facebook:hover { background: #1877F2; color: #fff; transform: translateY(-3px); }
+  .social-youtube { color: #FF0000; background: rgba(255, 0, 0, 0.1); }
+  .social-youtube:hover { background: #FF0000; color: #fff; transform: translateY(-3px); }
+
+  /* Marquee */
+  @keyframes scroll-left { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+  .marquee-container { display: flex; overflow: hidden; }
+  .marquee-content { display: flex; flex-shrink: 0; animation: scroll-left 40s linear infinite; }
+  .partner-card { display: flex; align-items: center; justify-content: center; padding: 1.5rem; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.05); border-radius: 16px; transition: all 0.3s; min-width: 200px; height: 80px; margin: 0 8px; }
+  .partner-card:hover { background: rgba(255,255,255,0.06); border-color: var(--border); transform: translateY(-3px); }
+
+  /* Chat Widget */
+  .chat-window { position: fixed; bottom: 105px; right: 30px; width: 380px; max-width: calc(100vw - 60px); height: 550px; max-height: calc(100vh - 150px); background: var(--card); border: 1px solid var(--border-2); border-radius: 20px; overflow: hidden; z-index: 61; display: flex; flex-direction: column; transform: translateY(20px) scale(0.95); opacity: 0; pointer-events: none; transition: all 0.3s; box-shadow: 0 30px 60px rgba(0,0,0,0.5); }
+  body.rtl .chat-window { right: auto; left: 30px; }
+  .chat-window.active { transform: translateY(0) scale(1); opacity: 1; pointer-events: all; }
+
+  /* Floating Buttons */
+  .float-btn { position: fixed; z-index: 60; transition: all 0.3s; }
+  .whatsapp-btn { bottom: 30px; left: 30px; width: 60px; height: 60px; border-radius: 50%; background: #25D366; color: white; display: flex; align-items: center; justify-content: center; font-size: 28px; box-shadow: 0 10px 30px rgba(37,211,102,0.4); animation: pulse-wa 2s infinite; }
+  body.rtl .whatsapp-btn { left: auto; right: 30px; }
+  @keyframes pulse-wa { 0%,100% { box-shadow: 0 10px 30px rgba(37,211,102,0.4), 0 0 0 0 rgba(37,211,102,0.5); } 50% { box-shadow: 0 10px 30px rgba(37,211,102,0.4), 0 0 0 20px rgba(37,211,102,0); } }
+  .whatsapp-btn:hover { transform: scale(1.1); }
+  .chat-btn { bottom: 30px; right: 30px; width: 60px; height: 60px; border-radius: 50%; background: linear-gradient(135deg, var(--accent), var(--blue)); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 24px; box-shadow: 0 10px 30px rgba(139,92,246,0.4); cursor: pointer; border: none; }
+  body.rtl .chat-btn { right: auto; left: 30px; }
+
+  @media (max-width: 768px) {
+    .hero-wrap { height: 400vh; } /* Shorter hero on mobile */
+    .chat-window { width: calc(100vw - 30px); right: 15px; bottom: 90px; }
+    body.rtl .chat-window { left: 15px; }
+    .whatsapp-btn, .chat-btn { width: 52px; height: 52px; font-size: 22px; }
+    .whatsapp-btn { left: 15px; bottom: 15px; }
+    body.rtl .whatsapp-btn { right: 15px; left: auto; }
+    .chat-btn { right: 15px; bottom: 15px; }
+    body.rtl .chat-btn { left: 15px; right: auto; }
+  }
+</style>
+</head>
+<body>
+
+<div class="fixed top-0 left-0 h-1 bg-gradient-to-r from-[var(--accent)] to-[var(--blue)] z-[100] transition-all" id="scrollProgress" style="width:0%"></div>
+
+<!-- Top Bar -->
+<div class="glass-nav border-b border-white/5 py-2 text-xs relative z-50 hidden md:block">
+  <div class="max-w-7xl mx-auto px-6 flex items-center justify-between">
+    <div class="flex items-center gap-6 text-[var(--muted)]">
+      <span class="flex items-center gap-2"><i class="fa-solid fa-location-dot text-[var(--accent-2)]"></i> 🇸🇦 KSA · 🇦🇪 UAE · 🇮🇳 India</span>
+      <span class="flex items-center gap-2"><i class="fa-solid fa-phone text-[var(--accent-2)]"></i> +966 53 083 6711</span>
+      <span class="flex items-center gap-2"><i class="fa-solid fa-envelope text-[var(--accent-2)]"></i> info@marinaworldlink.com</span>
+    </div>
+    <div class="flex items-center gap-3">
+      <a href="#" class="social-icon social-linkedin"><i class="fa-brands fa-linkedin-in"></i></a>
+      <a href="#" class="social-icon social-twitter"><i class="fa-brands fa-x-twitter"></i></a>
+      <a href="#" class="social-icon social-instagram"><i class="fa-brands fa-instagram"></i></a>
+      <a href="#" class="social-icon social-facebook"><i class="fa-brands fa-facebook-f"></i></a>
+      <a href="#" class="social-icon social-youtube"><i class="fa-brands fa-youtube"></i></a>
+      <button id="langBtn" class="text-[var(--accent-2)] font-bold border border-[var(--border)] rounded-md px-3 py-1 hover:bg-[var(--accent)] hover:text-white transition flex items-center gap-1.5 ml-2">
+        <i class="fa-solid fa-globe"></i> <span>العربية</span>
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Navigation -->
+<nav class="sticky top-0 z-50 glass-nav border-b border-white/5">
+  <div class="max-w-7xl mx-auto px-6 flex items-center justify-between h-20">
+    <a href="#home" class="flex items-center gap-3">
+      <img src="https://z-cdn-media.chatglm.cn/files/f53a0923-869a-4506-8077-a7d4411b00bc.png?auth_key=1884275750-99b00db208094c7c8a84fec04a2594da-0-ea27a0d4652ebd750c7ed6bc12a9f355" alt="Logo" class="w-12 h-12 rounded-full object-cover shadow-lg shadow-purple-500/20">
+      <div>
+        <div class="font-display font-bold text-base sm:text-lg leading-none" data-en="MARINA WORLDLINK Co." data-ar="شركة مارينا ورلد لينك">MARINA WORLDLINK Co.</div>
+        <div class="text-[10px] tracking-[0.3em] text-[var(--muted)] mt-1" data-en="BUILDING BEYOND BOUNDARIES" data-ar="نبني ما وراء الحدود">BUILDING BEYOND BOUNDARIES</div>
+      </div>
+    </a>
+    <div class="hidden lg:flex items-center gap-1 text-sm">
+      <a href="#home" class="nav-link active" data-en="Home" data-ar="الرئيسية">Home</a>
+      <a href="#about" class="nav-link" data-en="About" data-ar="من نحن">About</a>
+      <a href="#services" class="nav-link" data-en="Services" data-ar="خدماتنا">Services</a>
+      <a href="#portfolio" class="nav-link" data-en="Portfolio" data-ar="أعمالنا">Portfolio</a>
+      <a href="#projects" class="nav-link" data-en="Projects" data-ar="المشاريع">Projects</a>
+      <a href="#clients" class="nav-link" data-en="Clients" data-ar="عملاؤنا">Clients</a>
+      <a href="#maintenance" class="nav-link" data-en="AMC & O&M" data-ar="الصيانة">AMC & O&M</a>
+      <a href="#contact" class="nav-link" data-en="Contact" data-ar="اتصل بنا">Contact</a>
+    </div>
+    <div class="flex items-center gap-3">
+      <a href="#contact" class="hidden md:inline-flex btn-primary px-5 py-2.5 rounded-xl text-sm">
+        <span data-en="Get a Quote" data-ar="اطلب عرض سعر">Get a Quote</span>
+        <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+      </a>
+      <button class="lg:hidden w-10 h-10 rounded-lg border border-white/10 flex items-center justify-center" id="menuBtn">
+        <i class="fa-solid fa-bars text-lg"></i>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- Full Screen Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <button id="closeMenu" class="absolute top-8 right-8 w-12 h-12 rounded-lg border border-white/10 flex items-center justify-center text-xl"><i class="fa-solid fa-xmark"></i></button>
+  <a href="#home" class="mobile-link" data-en="Home" data-ar="الرئيسية">Home</a>
+  <a href="#about" class="mobile-link" data-en="About" data-ar="من نحن">About</a>
+  <a href="#services" class="mobile-link" data-en="Services" data-ar="خدماتنا">Services</a>
+  <a href="#portfolio" class="mobile-link" data-en="Portfolio" data-ar="أعمالنا">Portfolio</a>
+  <a href="#projects" class="mobile-link" data-en="Projects" data-ar="المشاريع">Projects</a>
+  <a href="#clients" class="mobile-link" data-en="Clients" data-ar="عملاؤنا">Clients</a>
+  <a href="#maintenance" class="mobile-link" data-en="AMC & O&M" data-ar="الصيانة">AMC & O&M</a>
+  <a href="#contact" class="mobile-link" data-en="Contact" data-ar="اتصل بنا">Contact</a>
+  <button id="langBtnMobile" class="absolute bottom-8 left-1/2 -translate-x-1/2 text-[var(--accent-2)] font-bold border border-[var(--border)] rounded-md px-6 py-2 flex items-center gap-2">
+    <i class="fa-solid fa-globe"></i> <span>العربية</span>
+  </button>
+</div>
+
+<!-- ===== CINEMATIC SCROLL HERO ===== -->
+<section id="home" class="hero-wrap">
+  <div class="hero-sticky">
+    <div class="hero-bg" id="heroBg">
+      <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1920&q=80" alt="Hero BG" id="heroBgImg1" style="opacity: 1;">
+      <img src="" alt="Hero BG Next" id="heroBgImg2" style="opacity: 0;">
+    </div>
+    <canvas id="particle-canvas" class="absolute inset-0 z-[2]"></canvas>
+    <div class="blob z-[3]" style="width:600px;height:600px;background:radial-gradient(circle,#8b5cf6,transparent);top:-100px;right:-100px;opacity:0.25;"></div>
+    <div class="blob z-[3]" style="width:500px;height:500px;background:radial-gradient(circle,#3b82f6,transparent);bottom:-50px;left:-100px;opacity:0.2;"></div>
+
+    <!-- Futuristic Orbits -->
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[4] hidden md:block">
+      <div class="futuristic-ring" style="width:700px; height:700px; left:-350px; top:-350px; animation: spin-slow 40s linear infinite;"></div>
+      <div class="futuristic-ring" style="width:500px; height:500px; left:-250px; top:-250px; border-style:dashed; animation: spin-slow 30s linear infinite reverse;"></div>
+    </div>
+
+    <!-- Frame 1: Intro -->
+    <div class="hero-frame active" data-frame="0" data-bg="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1920&q=80">
+      <div class="hero-content-inner">
+        <div class="section-label mb-6 mx-auto inline-flex"><span data-en="Kingdom of Saudi Arabia · Since 2006" data-ar="المملكة العربية السعودية · منذ 2006">Kingdom of Saudi Arabia · Since 2006</span></div>
+        <h1 class="font-display font-black text-4xl sm:text-7xl leading-[0.95] mb-6">
+          <span data-en="Engineering Trust." data-ar="ثقة في الهندسة.">Engineering Trust.</span><br>
+          <span class="text-brand-gradient" data-en="Delivering the Kingdom’s Future." data-ar="نبني مستقبل المملكة.">Delivering the Kingdom’s Future.</span>
+        </h1>
+        <p class="text-base sm:text-lg text-[var(--muted)] max-w-2xl mx-auto" data-en="An ISO-certified Saudi contractor integrating MEP, Civil, Fit-out, Firefighting, HVAC, IT, and AMC services." data-ar="مقاول سعودي معتمد ISO يدمج الميكانيكا والكهرباء والأعمال المدنية والتشطيبات ومكافحة الحرائق والتكييف وتقنية المعلومات والصيانة.">
+          An ISO-certified Saudi contractor integrating MEP, Civil, Fit-out, Firefighting, HVAC, IT, and AMC services.
+        </p>
+      </div>
+    </div>
+
+    <!-- Frame 2: MEP & Civil -->
+    <div class="hero-frame" data-frame="1" data-bg="https://images.unsplash.com/photo-1504307857010-9c5021c1d1e1?auto=format&fit=crop&w=1920&q=80">
+      <div class="hero-content-inner">
+        <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-3xl glass-card flex items-center justify-center text-4xl sm:text-5xl text-[var(--accent-2)] mx-auto mb-6 icon-anim">
+          <i class="fa-solid fa-bolt"></i>
+        </div>
+        <h2 class="font-display font-bold text-3xl sm:text-6xl mb-4" data-en="MEP & Building Construction" data-ar="الميكانيكا والكهرباء والبناء">MEP & Building Construction</h2>
+        <p class="text-base sm:text-lg text-[var(--muted)] max-w-2xl mx-auto" data-en="From foundations and structural steel to fully coordinated BIM-driven MEP installations, we build the core of your assets." data-ar="من الأساسات والهياكل الفولاذية إلى تركيبات الميكانيكا والكهرباء المنسقة بـ BIM، نبني جوهر أصولك.">
+          From foundations and structural steel to fully coordinated BIM-driven MEP installations, we build the core of your assets.
+        </p>
+      </div>
+    </div>
+
+    <!-- Frame 3: HVAC & Fire -->
+    <div class="hero-frame" data-frame="2" data-bg="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=1920&q=80">
+      <div class="hero-content-inner">
+        <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-3xl glass-card flex items-center justify-center text-4xl sm:text-5xl text-[var(--accent-2)] mx-auto mb-6 icon-anim">
+          <i class="fa-solid fa-snowflake"></i>
+        </div>
+        <h2 class="font-display font-bold text-3xl sm:text-6xl mb-4" data-en="Fire Safety & Climate Control" data-ar="سلامة الحرائق وتحكم المناخ">Fire Safety & Climate Control</h2>
+        <p class="text-base sm:text-lg text-[var(--muted)] max-w-2xl mx-auto" data-en="NFPA-compliant firefighting systems and HVAC solutions engineered specifically for the extreme Saudi climate." data-ar="أنظمة مكافحة حرائق متوافقة مع NFPA وحلول تكييف مصممة خصيصاً للمناخ السعودي القاسي.">
+          NFPA-compliant firefighting systems and HVAC solutions engineered specifically for the extreme Saudi climate.
+        </p>
+      </div>
+    </div>
+
+    <!-- Frame 4: CCTV & IT -->
+    <div class="hero-frame" data-frame="3" data-bg="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1920&q=80">
+      <div class="hero-content-inner">
+        <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-3xl glass-card flex items-center justify-center text-4xl sm:text-5xl text-[var(--accent-2)] mx-auto mb-6 icon-anim">
+          <i class="fa-solid fa-video"></i>
+        </div>
+        <h2 class="font-display font-bold text-3xl sm:text-6xl mb-4" data-en="CCTV, IT & ELV Infrastructure" data-ar="أنظمة المراقبة وتقنية المعلومات">CCTV, IT & ELV Infrastructure</h2>
+        <p class="text-base sm:text-lg text-[var(--muted)] max-w-2xl mx-auto" data-en="Comprehensive IT networking, structured cabling, and advanced CCTV/security systems for smart buildings." data-ar="شبكات تقنية المعلومات الشاملة، الكابلات المنظمة، وأنظمة المراقبة والأمان المتقدمة للمباني الذكية.">
+          Comprehensive IT networking, structured cabling, and advanced CCTV/security systems for smart buildings.
+        </p>
+      </div>
+    </div>
+
+    <!-- Frame 5: Design & Cleaning -->
+    <div class="hero-frame" data-frame="4" data-bg="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1920&q=80">
+      <div class="hero-content-inner">
+        <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-3xl glass-card flex items-center justify-center text-4xl sm:text-5xl text-[var(--accent-2)] mx-auto mb-6 icon-anim">
+          <i class="fa-solid fa-couch"></i>
+        </div>
+        <h2 class="font-display font-bold text-3xl sm:text-6xl mb-4" data-en="Designing, Fit-out & Cleaning" data-ar="التصميم والتشطيبات والتنظيف">Designing, Fit-out & Cleaning</h2>
+        <p class="text-base sm:text-lg text-[var(--muted)] max-w-2xl mx-auto" data-en="Premium interior design, turnkey fit-out solutions, and professional cleaning services to maintain pristine environments." data-ar="تصميم داخلي فاخر، حلول تشطيب متكاملة، وخدمات تنظيف احترافية للحفاظ على بيئات نقية.">
+          Premium interior design, turnkey fit-out solutions, and professional cleaning services to maintain pristine environments.
+        </p>
+      </div>
+    </div>
+
+    <!-- Frame 6: AMC -->
+    <div class="hero-frame" data-frame="5" data-bg="https://images.unsplash.com/photo-1581094271901-7a5d7c8e8c5e?auto=format&fit=crop&w=1920&q=80">
+      <div class="hero-content-inner">
+        <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-3xl glass-card flex items-center justify-center text-4xl sm:text-5xl text-[var(--accent-2)] mx-auto mb-6 icon-anim">
+          <i class="fa-solid fa-screwdriver-wrench"></i>
+        </div>
+        <h2 class="font-display font-bold text-3xl sm:text-6xl mb-4" data-en="24/7 AMC & Facility Care" data-ar="صيانة ومرافق على مدار الساعة">24/7 AMC & Facility Care</h2>
+        <p class="text-base sm:text-lg text-[var(--muted)] max-w-2xl mx-auto" data-en="One accountable partner from groundbreaking to year-five operations. We keep your facilities running at peak performance." data-ar="شريك واحد مسؤول من حجر الأساس حتى عمليات السنة الخامسة. نحافظ على تشغيل مرافقك بأقصى كفاءة.">
+          One accountable partner from groundbreaking to year-five operations. We keep your facilities running at peak performance.
+        </p>
+        <a href="#contact" class="btn-primary px-8 py-4 rounded-xl text-sm inline-flex items-center mt-8">
+          <span data-en="Start Your Project" data-ar="ابدأ مشروعك">Start Your Project</span>
+          <i class="fa-solid fa-arrow-right ml-2"></i>
+        </a>
+      </div>
+    </div>
+
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-[var(--muted)] text-xs z-10" id="heroScrollInd">
+      <span class="uppercase tracking-widest" data-en="Scroll to explore" data-ar="اسحب للأسفل">Scroll to explore</span>
+      <i class="fa-solid fa-chevron-down animate-bounce text-[var(--accent-2)]"></i>
+    </div>
+  </div>
+</section>
+
+<!-- Partners Marquee -->
+<section class="py-12 border-y border-white/5 bg-[var(--bg-2)] overflow-hidden">
+  <div class="max-w-7xl mx-auto px-6 mb-8">
+    <p class="text-center text-xs uppercase tracking-[0.3em] text-[var(--muted)]" data-en="Authorised Partners & Brands We Build With" data-ar="الشركاء المعتمدون والعلامات التجارية التي نبني بها">Authorised Partners & Brands We Build With</p>
+  </div>
+  <div class="marquee-container" id="partnersMarquee">
+    <!-- Injected Via JS -->
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="py-24 relative bg-[var(--bg-2)]">
+  <div class="absolute inset-0 opacity-50" style="background-image: linear-gradient(rgba(139,92,246,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(139,92,246,0.03) 1px, transparent 1px); background-size: 70px 70px; mask-image: radial-gradient(ellipse at center, black 20%, transparent 75%);"></div>
+  <div class="max-w-7xl mx-auto px-6 relative">
+    <div class="grid lg:grid-cols-2 gap-16 items-center">
+      <div class="reveal">
+        <div class="relative">
+          <div class="aspect-[4/5] rounded-3xl overflow-hidden border border-white/10">
+            <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=800&q=80" alt="Team" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105">
+          </div>
+          <div class="absolute -bottom-8 -right-8 w-48 h-48 rounded-2xl overflow-hidden border-4 border-[var(--bg-2)] shadow-2xl hidden md:block">
+            <img src="https://images.unsplash.com/photo-1504307857010-9c5021c1d1e1?auto=format&fit=crop&w=400&q=80" alt="Site" class="w-full h-full object-cover">
+          </div>
+          <div class="absolute -top-6 -left-6 glass rounded-2xl p-5 float border-[var(--border)]">
+            <div class="flex items-center gap-3">
+              <div class="w-12 h-12 rounded-xl bg-[var(--accent)]/15 flex items-center justify-center text-[var(--accent-2)] text-xl"><i class="fa-solid fa-award icon-anim"></i></div>
+              <div>
+                <div class="font-display font-bold text-2xl text-brand-gradient">12+</div>
+                <div class="text-xs text-[var(--muted)]" data-en="Years in KSA" data-ar="سنوات في السعودية">Years in KSA</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="reveal">
+        <div class="section-label mb-5"><span data-en="Who We Are" data-ar="من نحن">Who We Are</span></div>
+        <h2 class="font-display font-bold text-3xl md:text-5xl mb-6 leading-tight" data-en="An integrated MEP & civil contractor built for Saudi-scale projects." data-ar="مقاول متكامل للميكانيكا والكهرباء والأعمال المدنية مصمم للمشاريع على المستوى السعودي.">
+          An integrated MEP & civil contractor built for <span class="text-brand-gradient" data-en="Saudi-scale projects." data-ar="المشاريع السعودية.">Saudi-scale projects.</span>
+        </h2>
+        <p class="text-[var(--muted)] mb-6" data-en="Marina WorldLink Co. is a KSA-based contracting firm delivering end-to-end Mechanical, Electrical, Plumbing, Civil, Fit-out, Firefighting and HVAC solutions. Headquartered in the Kingdom and active across UAE and India, we serve developers, consultants, government bodies and industrial clients." data-ar="شركة مارينا ورلد لينك هي شركة مقاولات مقرها في المملكة العربية السعودية تقدم حلولاً شاملة في الميكانيكا والكهرباء والسباكة والأعمال المدنية والتشطيبات ومكافحة الحرائق وأنظمة التكييف. يقع مقرنا الرئيسي في المملكة ولدينا نشاط في الإمارات والهند، ونخدم المطورين والاستشاريين والجهات الحكومية والعملاء الصناعيين.">
+          Marina WorldLink Co. is a KSA-based contracting firm delivering end-to-end Mechanical, Electrical, Plumbing, Civil, Fit-out, Firefighting and HVAC solutions.
+        </p>
+        <div class="grid grid-cols-2 gap-4 mb-8">
+          <div class="flex items-start gap-3"><div class="w-10 h-10 rounded-lg bg-[var(--accent)]/10 text-[var(--accent-2)] flex items-center justify-center shrink-0"><i class="fa-solid fa-check"></i></div><div><div class="font-semibold text-sm" data-en="In-house Engineering" data-ar="هندسة داخلية">In-house Engineering</div><div class="text-xs text-[var(--muted)]" data-en="BIM & QA/QC controlled" data-ar="تحكم BIM و QA/QC">BIM & QA/QC controlled</div></div></div>
+          <div class="flex items-start gap-3"><div class="w-10 h-10 rounded-lg bg-[var(--accent)]/10 text-[var(--accent-2)] flex items-center justify-center shrink-0"><i class="fa-solid fa-check"></i></div><div><div class="font-semibold text-sm" data-en="Zero Interface Risk" data-ar="صفر مخاطر">Zero Interface Risk</div><div class="text-xs text-[var(--muted)]" data-en="8 disciplines under 1 roof" data-ar="8 تخصصات تحت سقف واحد">8 disciplines under 1 roof</div></div></div>
+        </div>
+        <a href="#contact" class="btn-primary px-7 py-4 rounded-xl text-sm inline-flex items-center"><span data-en="Partner With Us" data-ar="كن شريكاً معنا">Partner With Us</span><i class="fa-solid fa-arrow-right ml-2"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="py-24 relative">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+      <div class="section-label mb-5"><span data-en="What We Do" data-ar="ماذا نقدم">What We Do</span></div>
+      <h2 class="font-display font-bold text-3xl md:text-5xl mb-5" data-en="One Contractor. Total Accountability." data-ar="مقاول واحد. مسؤولية كاملة.">One Contractor. <span class="text-brand-gradient" data-en="Total Accountability." data-ar="مسؤولية كاملة.">Total Accountability.</span></h2>
+    </div>
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div id="servicesGrid" class="contents"></div>
+    </div>
+  </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section id="portfolio" class="py-24 relative bg-[var(--bg-2)]">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="text-center max-w-3xl mx-auto mb-12 reveal">
+      <div class="section-label mb-5"><span data-en="Portfolio" data-ar="أعمالنا">Portfolio</span></div>
+      <h2 class="font-display font-bold text-3xl md:text-5xl" data-en="Our Iconic Projects" data-ar="مشاريعنا المميزة">Our <span class="text-brand-gradient" data-en="Iconic Projects" data-ar="المشاريع المميزة">Iconic Projects</span></h2>
+    </div>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5" id="portfolioGrid">
+      <!-- Injected via JS -->
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS TRACK RECORD -->
+<section id="projects" class="py-24 relative">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+      <div class="section-label mb-5"><span data-en="Track Record" data-ar="سجل الإنجازات">Track Record</span></div>
+      <h2 class="font-display font-bold text-3xl md:text-5xl mb-5" data-en="Recent Projects Delivered" data-ar="مشاريع حديثة منجزة">Recent <span class="text-brand-gradient" data-en="Projects Delivered" data-ar="المشاريع المنجزة">Projects Delivered</span></h2>
+    </div>
+    <div class="glass-card rounded-3xl p-2 sm:p-4 overflow-x-auto reveal">
+      <table class="w-full text-left border-collapse min-w-[800px]">
+        <thead>
+          <tr class="border-b border-white/10">
+            <th class="p-4 font-display font-bold text-sm" data-en="Project" data-ar="المشروع">Project</th>
+            <th class="p-4 font-display font-bold text-sm" data-en="Client" data-ar="العميل">Client</th>
+            <th class="p-4 font-display font-bold text-sm" data-en="Scope" data-ar="النطاق">Scope</th>
+            <th class="p-4 font-display font-bold text-sm" data-en="Value" data-ar="القيمة">Value</th>
+            <th class="p-4 font-display font-bold text-sm" data-en="Year" data-ar="السنة">Year</th>
+          </tr>
+        </thead>
+        <tbody class="text-[var(--muted)] text-sm" id="projectsTable">
+          <!-- Injected via JS -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- OUR CLIENTS -->
+<section id="clients" class="py-24 relative bg-[var(--bg-2)]">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+      <div class="section-label mb-5"><span data-en="Trusted By" data-ar="وثق بنا">Trusted By</span></div>
+      <h2 class="font-display font-bold text-3xl md:text-5xl mb-5" data-en="Our Clients" data-ar="عملاؤنا">Our <span class="text-brand-gradient" data-en="Clients" data-ar="العملاء">Clients</span></h2>
+    </div>
+    <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4" id="clientsGrid">
+      <!-- Injected via JS -->
+    </div>
+  </div>
+</section>
+
+<!-- MAINTENANCE -->
+<section id="maintenance" class="py-24 relative">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="grid lg:grid-cols-12 gap-12 items-center">
+      <div class="lg:col-span-5 reveal">
+        <div class="section-label mb-5"><span data-en="08 · AMC & O&M" data-ar="08 · الصيانة والتشغيل">08 · AMC & O&M</span></div>
+        <h2 class="font-display font-bold text-3xl md:text-5xl mb-6 leading-tight" data-en="24/7 Facility Care" data-ar="رعاية المرافق على مدار الساعة">24/7 <span class="text-brand-gradient" data-en="Facility Care" data-ar="رعاية المرافق">Facility Care</span></h2>
+        <p class="text-[var(--muted)] mb-8" data-en="From commissioning to year-five operations, we provide preventive, corrective, and emergency maintenance along with full soft services." data-ar="من التشغيل إلى عمليات السنة الخامسة، نقدم صيانة وقائية وتصحيحية وطوارئ إلى جانب الخدمات الناعمة الكاملة.">From commissioning to year-five operations, we provide preventive, corrective, and emergency maintenance along with full soft services.</p>
+        <a href="#contact" class="btn-primary px-7 py-4 rounded-xl text-sm inline-flex items-center"><span data-en="Request AMC Proposal" data-ar="اطلب عرض صيانة">Request AMC Proposal</span><i class="fa-solid fa-arrow-right ml-2"></i></a>
+      </div>
+      <div class="lg:col-span-7 reveal">
+        <div class="grid sm:grid-cols-2 gap-4">
+          <div class="glass-card rounded-2xl p-6">
+            <i class="fa-solid fa-shield-virus text-3xl text-[var(--accent-2)] mb-4 icon-anim"></i>
+            <h4 class="font-display font-bold text-lg mb-2" data-en="Preventive Maintenance" data-ar="صيانة وقائية">Preventive Maintenance</h4>
+            <p class="text-xs text-[var(--muted)]" data-en="Scheduled servicing to prevent breakdowns." data-ar="خدمة مجدولة لمنع الأعطال.">Scheduled servicing to prevent breakdowns.</p>
+          </div>
+          <div class="glass-card rounded-2xl p-6">
+            <i class="fa-solid fa-truck-medical text-3xl text-[var(--accent-2)] mb-4 icon-anim"></i>
+            <h4 class="font-display font-bold text-lg mb-2" data-en="Emergency Response" data-ar="استجابة الطوارئ">Emergency Response</h4>
+            <p class="text-xs text-[var(--muted)]" data-en="Rapid 24/7 emergency callout." data-ar="استدعاء طوارئ سريع 24/7.">Rapid 24/7 emergency callout.</p>
+          </div>
+          <div class="glass-card rounded-2xl p-6">
+            <i class="fa-solid fa-broom text-3xl text-[var(--accent-2)] mb-4 icon-anim"></i>
+            <h4 class="font-display font-bold text-lg mb-2" data-en="Soft FM Services" data-ar="خدمات ناعمة">Soft FM Services</h4>
+            <p class="text-xs text-[var(--muted)]" data-en="Janitorial, pest control & landscaping." data-ar="تنظيف ومكافحة حشرات وتنسيق.">Janitorial, pest control & landscaping.</p>
+          </div>
+          <div class="glass-card rounded-2xl p-6">
+            <i class="fa-solid fa-chart-line text-3xl text-[var(--accent-2)] mb-4 icon-anim"></i>
+            <h4 class="font-display font-bold text-lg mb-2" data-en="SLA Reporting" data-ar="تقارير SLA">SLA Reporting</h4>
+            <p class="text-xs text-[var(--muted)]" data-en="Monthly reports & dashboards." data-ar="تقارير ولوحات شهرية.">Monthly reports & dashboards.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="py-24 relative bg-[var(--bg-2)]">
+  <div class="blob" style="width:600px;height:600px;background:radial-gradient(circle,#8b5cf6,transparent);top:20%;left:-150px;opacity:0.15;"></div>
+  <div class="max-w-7xl mx-auto px-6 relative">
+    <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+      <div class="section-label mb-5"><span data-en="Get In Touch" data-ar="تواصل معنا">Get In Touch</span></div>
+      <h2 class="font-display font-bold text-3xl md:text-5xl mb-5" data-en="Let's Build Together" data-ar="لنبنِ معاً">Let's <span class="text-brand-gradient" data-en="Build Together" data-ar="نبني معاً">Build Together</span></h2>
+    </div>
+    
+    <div class="grid lg:grid-cols-12 gap-8">
+      <div class="lg:col-span-5 reveal">
+        <div class="glass-card rounded-2xl p-6 mb-4 flex items-center gap-4">
+          <div class="w-14 h-14 rounded-xl bg-[var(--accent)]/10 text-[var(--accent-2)] flex items-center justify-center text-xl"><i class="fa-solid fa-phone icon-anim"></i></div>
+          <div>
+            <div class="text-xs text-[var(--muted)] uppercase tracking-wider" data-en="Call Us" data-ar="اتصل بنا">Call Us</div>
+            <a href="tel:+966530836711" class="font-semibold text-lg hover:text-[var(--accent-2)] transition">+966 53 083 6711</a>
+          </div>
+        </div>
+        <div class="glass-card rounded-2xl p-6 mb-4 flex items-center gap-4">
+          <div class="w-14 h-14 rounded-xl bg-[var(--accent)]/10 text-[var(--accent-2)] flex items-center justify-center text-xl"><i class="fa-solid fa-envelope icon-anim"></i></div>
+          <div>
+            <div class="text-xs text-[var(--muted)] uppercase tracking-wider" data-en="Email Us" data-ar="راسلنا">Email Us</div>
+            <a href="mailto:info@marinaworldlink.com" class="font-semibold text-lg hover:text-[var(--accent-2)] transition">info@marinaworldlink.com</a>
+          </div>
+        </div>
+        <div class="glass-card rounded-2xl p-6 mb-6 flex items-center gap-4">
+          <div class="w-14 h-14 rounded-xl bg-[var(--accent)]/10 text-[var(--accent-2)] flex items-center justify-center text-xl"><i class="fa-solid fa-globe icon-anim"></i></div>
+          <div>
+            <div class="text-xs text-[var(--muted)] uppercase tracking-wider" data-en="Our Offices" data-ar="مكاتبنا">Our Offices</div>
+            <div class="font-semibold text-base">🇸🇦 Riyadh, KSA · 🇦🇪 Dubai, UAE · 🇮🇳 Mumbai, India</div>
+          </div>
+        </div>
+        <div class="flex items-center gap-3">
+          <a href="#" class="social-icon social-linkedin"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="#" class="social-icon social-twitter"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#" class="social-icon social-instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" class="social-icon social-facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" class="social-icon social-youtube"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="lg:col-span-7 reveal">
+        <form class="glass-card rounded-3xl p-8" id="contactForm">
+          <div class="grid sm:grid-cols-2 gap-4 mb-4">
+            <div>
+              <label class="text-xs text-[var(--muted)] uppercase tracking-wider mb-2 block" data-en="Full Name *" data-ar="الاسم الكامل *">Full Name *</label>
+              <input type="text" required class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-[var(--accent)] transition" placeholder="John Doe">
+            </div>
+            <div>
+              <label class="text-xs text-[var(--muted)] uppercase tracking-wider mb-2 block" data-en="Company" data-ar="الشركة">Company</label>
+              <input type="text" class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-[var(--accent)] transition" placeholder="Company name">
+            </div>
+            <div>
+              <label class="text-xs text-[var(--muted)] uppercase tracking-wider mb-2 block" data-en="Email *" data-ar="البريد *">Email *</label>
+              <input type="email" required class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-[var(--accent)] transition" placeholder="you@company.com">
+            </div>
+            <div>
+              <label class="text-xs text-[var(--muted)] uppercase tracking-wider mb-2 block" data-en="Phone *" data-ar="الهاتف *">Phone *</label>
+              <input type="tel" required class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-[var(--accent)] transition" placeholder="+966 5X XXX XXXX">
+            </div>
+          </div>
+          <div class="mb-4">
+            <label class="text-xs text-[var(--muted)] uppercase tracking-wider mb-2 block" data-en="Service Required *" data-ar="الخدمة *">Service Required *</label>
+            <select required class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-[var(--accent)] transition">
+              <option value="" data-en="Select a service" data-ar="اختر خدمة">Select a service</option>
+              <option data-en="MEP Solutions" data-ar="حلول الميكانيكا والكهرباء">MEP Solutions</option>
+              <option data-en="Building Construction" data-ar="البناء والتشييد">Building Construction</option>
+              <option data-en="Fit-out & Designing" data-ar="التشطيبات والتصميم">Fit-out & Designing</option>
+              <option data-en="Firefighting" data-ar="مكافحة الحرائق">Firefighting</option>
+              <option data-en="HVAC Solutions" data-ar="أنظمة التكييف">HVAC Solutions</option>
+              <option data-en="CCTV & IT" data-ar="المراقبة وتقنية المعلومات">CCTV & IT</option>
+              <option data-en="Cleaning Services" data-ar="خدمات التنظيف">Cleaning Services</option>
+              <option data-en="AMC & O&M" data-ar="الصيانة">AMC & O&M</option>
+            </select>
+          </div>
+          <div class="mb-6">
+            <label class="text-xs text-[var(--muted)] uppercase tracking-wider mb-2 block" data-en="Project Details *" data-ar="التفاصيل *">Project Details *</label>
+            <textarea required rows="4" class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-[var(--accent)] transition resize-none" placeholder="Tell us about your scope, location, timeline..."></textarea>
+          </div>
+          <button type="submit" class="btn-primary px-7 py-4 rounded-xl text-sm inline-flex items-center w-full sm:w-auto justify-center">
+            <span data-en="Send Enquiry" data-ar="إرسال">Send Enquiry</span>
+            <i class="fa-solid fa-paper-plane ml-2"></i>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-[#040611] border-t border-white/5 pt-20 pb-8">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+      <div class="lg:col-span-2">
+        <a href="#home" class="flex items-center gap-3 mb-5">
+          <img src="https://z-cdn-media.chatglm.cn/files/f53a0923-869a-4506-8077-a7d4411b00bc.png?auth_key=1884275750-99b00db208094c7c8a84fec04a2594da-0-ea27a0d4652ebd750c7ed6bc12a9f355" alt="Logo" class="w-11 h-11 rounded-full object-cover shadow-lg">
+          <div>
+            <div class="font-display font-bold text-lg leading-none text-[var(--fg)]" data-en="MARINA WORLDLINK Co." data-ar="شركة مارينا ورلد لينك">MARINA WORLDLINK Co.</div>
+            <div class="text-[10px] tracking-[0.3em] text-[var(--muted)] mt-1" data-en="BUILDING BEYOND BOUNDARIES" data-ar="نبني ما وراء الحدود">BUILDING BEYOND BOUNDARIES</div>
+          </div>
+        </a>
+        <p class="text-sm text-[var(--muted)] mb-6 max-w-md" data-en="An ISO-certified Saudi contractor integrating MEP, Civil, Fit-out, Firefighting, HVAC, IT, Cleaning, and AMC services." data-ar="مقاول سعودي معتمد ISO يدمج الميكانيكا والكهرباء والأعمال المدنية والتشطيبات ومكافحة الحرائق والتكييف وتقنية المعلومات والتنظيف والصيانة.">An ISO-certified Saudi contractor integrating MEP, Civil, Fit-out, Firefighting, HVAC, IT, Cleaning, and AMC services.</p>
+        <div class="flex flex-wrap gap-3 mb-6">
+          <span class="px-3 py-1.5 border border-[var(--border)] rounded-lg text-xs text-[var(--accent-2)] flex items-center gap-2"><i class="fa-solid fa-shield-halved"></i> ISO 9001</span>
+          <span class="px-3 py-1.5 border border-[var(--border)] rounded-lg text-xs text-[var(--accent-2)] flex items-center gap-2"><i class="fa-solid fa-leaf"></i> ISO 14001</span>
+          <span class="px-3 py-1.5 border border-[var(--border)] rounded-lg text-xs text-[var(--accent-2)] flex items-center gap-2"><i class="fa-solid fa-helmet-safety"></i> ISO 45001</span>
+          <span class="px-3 py-1.5 border border-[var(--border)] rounded-lg text-xs text-[var(--accent-2)] flex items-center gap-2"><i class="fa-solid fa-eye"></i> Vision 2030</span>
+        </div>
+      </div>
+      <div>
+        <h5 class="font-display font-bold mb-4" data-en="Services" data-ar="الخدمات">Services</h5>
+        <ul class="space-y-2.5 text-sm text-[var(--muted)]">
+          <li><a href="#services" class="hover:text-[var(--accent-2)] transition" data-en="MEP Solutions" data-ar="حلول الميكانيكا والكهرباء">MEP Solutions</a></li>
+          <li><a href="#services" class="hover:text-[var(--accent-2)] transition" data-en="Building Construction" data-ar="البناء والتشييد">Building Construction</a></li>
+          <li><a href="#services" class="hover:text-[var(--accent-2)] transition" data-en="Designing & Fit-out" data-ar="التصميم والتشطيبات">Designing & Fit-out</a></li>
+          <li><a href="#services" class="hover:text-[var(--accent-2)] transition" data-en="Firefighting" data-ar="مكافحة الحرائق">Firefighting</a></li>
+          <li><a href="#services" class="hover:text-[var(--accent-2)] transition" data-en="HVAC Solutions" data-ar="أنظمة التكييف">HVAC Solutions</a></li>
+          <li><a href="#services" class="hover:text-[var(--accent-2)] transition" data-en="CCTV & IT" data-ar="المراقبة وتقنية المعلومات">CCTV & IT</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5 class="font-display font-bold mb-4" data-en="Legal & Registration" data-ar="القانونية والتسجيل">Legal & Registration</h5>
+        <ul class="space-y-2.5 text-sm text-[var(--muted)]">
+          <li>CR Number: 7053800236</li>
+          <li>VAT Number: 314666942500003</li>
+          <li>MOMRAH: Grade 3 (MEP) · Grade 4 (Civil)</li>
+          <li>Nitaqat: Platinum Range</li>
+          <li>LLC Established 2006</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="pt-8 border-t border-white/5 flex flex-wrap items-center justify-between gap-4 text-xs text-[var(--muted)]">
+      <div>© 2026 Marina WorldLink Co. All rights reserved.</div>
+      <div class="flex gap-6">
+        <a href="#" class="hover:text-[var(--accent-2)] transition" data-en="Privacy Policy" data-ar="سياسة الخصوصية">Privacy Policy</a>
+        <a href="#" class="hover:text-[var(--accent-2)] transition" data-en="Terms of Service" data-ar="شروط الخدمة">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/966530836711" target="_blank" class="float-btn whatsapp-btn" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+<button class="float-btn chat-btn" id="chatBtn" aria-label="Chat"><i class="fa-solid fa-comments"></i></button>
+
+<div class="chat-window" id="chatWindow" role="dialog">
+  <div class="bg-gradient-to-r from-[var(--accent)] to-[var(--blue)] p-5 text-white flex items-center gap-3">
+    <img src="https://z-cdn-media.chatglm.cn/files/f53a0923-869a-4506-8077-a7d4411b00bc.png?auth_key=1884275750-99b00db208094c7c8a84fec04a2594da-0-ea27a0d4652ebd750c7ed6bc12a9f355" alt="Avatar" class="w-11 h-11 rounded-full object-cover border-2 border-white/30">
+    <div class="flex-1">
+      <div class="font-display font-bold">Marina WorldLink AI</div>
+      <div class="text-xs opacity-80 flex items-center gap-1.5"><span class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span> <span data-en="Online" data-ar="متصل">Online</span></div>
+    </div>
+    <button id="closeChat" class="w-8 h-8 rounded-lg hover:bg-black/10 flex items-center justify-center"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+  <div class="flex-1 overflow-y-auto p-4 space-y-3" id="chatMessages"></div>
+  <div class="px-4 pb-2 flex flex-wrap gap-2" id="quickReplies">
+    <button class="qr-btn text-xs px-3 py-1.5 rounded-full border border-[var(--border)] text-[var(--accent-2)] hover:bg-[var(--accent)] hover:text-white transition" data-en="Our Services" data-ar="خدماتنا">Our Services</button>
+    <button class="qr-btn text-xs px-3 py-1.5 rounded-full border border-[var(--border)] text-[var(--accent-2)] hover:bg-[var(--accent)] hover:text-white transition" data-en="Pricing" data-ar="التسعير">Pricing</button>
+    <button class="qr-btn text-xs px-3 py-1.5 rounded-full border border-[var(--border)] text-[var(--accent-2)] hover:bg-[var(--accent)] hover:text-white transition" data-en="Talk to Human" data-ar="تحدث مع موظف">Talk to Human</button>
+  </div>
+  <form class="p-4 border-t border-white/5 flex gap-2" id="chatForm">
+    <input type="text" class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-2.5 text-white text-sm focus:outline-none focus:border-[var(--accent)]" id="chatInput" placeholder="Type your message...">
+    <button type="submit" class="btn-primary px-4 rounded-xl"><i class="fa-solid fa-paper-plane text-sm"></i></button>
+  </form>
+</div>
+
+<div class="fixed bottom-24 left-1/2 -translate-x-1/2 glass px-6 py-3 rounded-xl shadow-2xl border-[var(--border)] hidden items-center gap-3 z-[200]" id="toast">
+  <i class="fa-solid fa-circle-check text-[var(--accent-2)]"></i>
+  <span id="toastMsg">Message sent successfully</span>
+</div>
+
+<script>
+  // ===== Data Arrays =====
+  const partners = [
+    { name: 'Schneider Electric', icon: 'fa-bolt', color: '#3DCD58' },
+    { name: 'ABB', icon: 'fa-bolt', color: '#FF000F' },
+    { name: 'Carrier', icon: 'fa-snowflake', color: '#003366' },
+    { name: 'Daikin', icon: 'fa-snowflake', color: '#0033A0' },
+    { name: 'Honeywell', icon: 'fa-building-shield', color: '#FF6600' },
+    { name: 'Hikvision', icon: 'fa-video', color: '#FF0000' },
+    { name: 'Siemens', icon: 'fa-network-wired', color: '#009999' },
+    { name: 'Trane', icon: 'fa-snowflake', color: '#E31B22' },
+    { name: 'Grundfos', icon: 'fa-fan', color: '#0066B3' },
+    { name: 'Philips', icon: 'fa-lightbulb', color: '#0067A0' },
+    { name: 'Legrand', icon: 'fa-plug', color: '#FFD700' },
+    { name: 'Johnson Controls', icon: 'fa-temperature-half', color: '#AA0000' },
+    { name: 'Bosch', icon: 'fa-shield', color: '#ED0007' },
+    { name: 'Sony', icon: 'fa-camera', color: '#FFFFFF' },
+    { name: 'Samsung', icon: 'fa-monitor', color: '#1428A0' },
+    { name: 'LG', icon: 'fa-tv', color: '#A50034' },
+    { name: 'Axis', icon: 'fa-eye', color: '#FF0000' },
+    { name: 'Dahua', icon: 'fa-cctv', color: '#E10600' },
+    { name: 'Panasonic', icon: 'fa-video', color: '#0050A0' },
+    { name: 'Fluke', icon: 'fa-toolbox', color: '#FFFF00' },
+    { name: 'Megger', icon: 'fa-bolt', color: '#0072CE' },
+    { name: 'Makita', icon: 'fa-drill', color: '#0033A0' },
+    { name: 'DeWalt', icon: 'fa-screwdriver-wrench', color: '#FFD700' },
+    { name: 'Hilti', icon: 'fa-hammer', color: '#ED1C24' },
+    { name: 'Klein Tools', icon: 'fa-tools', color: '#D81326' },
+    { name: 'Simplex', icon: 'fa-fire-extinguisher', color: '#FFFFFF' },
+    { name: 'Zeta', icon: 'fa-bell', color: '#00ADEF' },
+    { name: 'Wilo', icon: 'fa-pump', color: '#00A1E0' },
+    { name: 'Sontay', icon: 'fa-gauge', color: '#00529C' },
+    { name: 'DEHN', icon: 'fa-bolt-lightning', color: '#0066B3' },
+    { name: 'Hager', icon: 'fa-toggle-on', color: '#005EB8' }
+  ];
+
+  // Real domains for Clearbit Logo API
+  const clients = [
+    { name: 'Hilton', domain: 'hilton.com' },
+    { name: 'Almarai', domain: 'almarai.com' },
+    { name: 'Noon', domain: 'noon.com' },
+    { name: 'Ministry of Defence', domain: 'mod.gov.sa' },
+    { name: 'Brands for Less', domain: 'brandsforless.com' },
+    { name: 'Tim Hortons', domain: 'timhortons.com' },
+    { name: 'Saudi Aramco', domain: 'aramco.com' },
+    { name: 'ROSHN', domain: 'roshn.sa' },
+    { name: 'Diriyah Gate', domain: 'dgda.gov.sa' },
+    { name: 'Riyadh Air', domain: 'riyadhair.com' },
+    { name: 'Ministry of Health', domain: 'moh.gov.sa' },
+    { name: 'King Saud Univ.', domain: 'ksu.edu.sa' },
+    { name: 'SABIC', domain: 'sabic.com' },
+    { name: 'NEOM', domain: 'neom.com' },
+    { name: 'Red Sea Global', domain: 'redseaglobal.com' },
+    { name: 'Saudi Electricity', domain: 'se.com.sa' },
+    { name: 'GEA', domain: 'gea.sa' },
+    { name: 'Saudi National Guard', domain: 'sang.gov.sa' },
+    { name: 'Al Safi Danone', domain: 'alsafi.com' },
+    { name: 'MODON', domain: 'modon.gov.sa' },
+    { name: 'Saudi Railway', domain: 'saudirailways.com' },
+    { name: 'PIF', domain: 'pif.gov.sa' }
+  ];
+
+  const portfolio = [
+    { img: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=600&q=80', tag: 'MEP · 2025', title: { en: 'Commercial Tower', ar: 'برج تجاري' } },
+    { img: 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=600&q=80', tag: 'Fit-out · 2024', title: { en: 'Hilton Hotel', ar: 'فندق هيلتون' } },
+    { img: 'https://images.unsplash.com/photo-1565043666747-69f6646db940?auto=format&fit=crop&w=600&q=80', tag: 'Civil · 2023', title: { en: 'Almarai Warehouse', ar: 'مستودع المراعي' } },
+    { img: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=600&q=80', tag: 'Fire · 2025', title: { en: 'Noon Warehouse', ar: 'مستودع نون' } },
+    { img: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=600&q=80', tag: 'Fit-out · 2023', title: { en: 'Ministry Building', ar: 'مبنى وزاري' } },
+    { img: 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=600&q=80', tag: 'Civil · 2024', title: { en: 'Retail Shops', ar: 'محلات تجارية' } },
+    { img: 'https://images.unsplash.com/photo-1517490232338-06b912a786b5?auto=format&fit=crop&w=600&q=80', tag: 'MEP · 2024', title: { en: 'Grade-A Offices', ar: 'مكاتب فئة أ' } },
+    { img: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=600&q=80', tag: 'IT · 2025', title: { en: 'Data Center', ar: 'مركز بيانات' } },
+    { img: 'https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=600&q=80', tag: 'HVAC · 2023', title: { en: 'Hospital HVAC', ar: 'تكييف مستشفى' } },
+    { img: 'https://images.unsplash.com/photo-1504307857010-9c5021c1d1e1?auto=format&fit=crop&w=600&q=80', tag: 'Civil · 2022', title: { en: 'Industrial Plant', ar: 'مصنع صناعي' } },
+    { img: 'https://images.unsplash.com/photo-1581094271901-7a5d7c8e8c5e?auto=format&fit=crop&w=600&q=80', tag: 'AMC · 2025', title: { en: 'Facility AMC', ar: 'صيانة مرافق' } },
+    { img: 'https://images.unsplash.com/photo-1517490232338-06b912a786b5?auto=format&fit=crop&w=600&q=80', tag: 'Design · 2024', title: { en: 'Smart Building', ar: 'مبنى ذكي' } }
+  ];
+
+  const projectsTable = [
+    { p: { en: 'Commercial Tower MEP', ar: 'برج تجاري ميكانيكا وكهرباء' }, c: 'Riyadh Dev', s: 'MEP + HVAC', v: 'SAR 3.0M', y: '2025' },
+    { p: { en: 'Hilton 5-Star Hotel', ar: 'فندق هيلتون 5 نجوم' }, c: 'Hilton', s: 'Fit-out + FF&E', v: 'SAR 2.5M', y: '2024' },
+    { p: { en: 'Noon Mega Warehouse', ar: 'مستودع نون الضخم' }, c: 'Noon.com', s: 'Firefighting', v: 'SAR 5.5M', y: '2025' },
+    { p: { en: 'Ministry Building', ar: 'مبنى وزاري' }, c: 'MoD', s: 'Fit-out + ELV', v: 'SAR 2.5M', y: '2023' },
+    { p: { en: 'Dairy Warehouse', ar: 'مستودع ألبان' }, c: 'Almarai', s: 'Civil + MEP', v: 'SAR 5.2M', y: '2023' },
+    { p: { en: 'Retail Shops', ar: 'محلات تجارية' }, c: 'Brands for Less', s: 'MEP + Civil', v: 'SAR 4.2M', y: '2024' },
+    { p: { en: 'QSR Chain AMC', ar: 'صيانة سلسلة مطاعم' }, c: 'Tim Hortons', s: 'AMC (5 yrs)', v: 'SAR 1.2M', y: '2025' },
+    { p: { en: 'Hospital HVAC', ar: 'تكييف مستشفى' }, c: 'MOH', s: 'HVAC + BMS', v: 'SAR 3.8M', y: '2024' },
+    { p: { en: 'Data Center IT', ar: 'مركز بيانات تقنية معلومات' }, c: 'STC', s: 'IT + ELV', v: 'SAR 6.1M', y: '2025' },
+    { p: { en: 'University Campus', ar: 'حرم جامعي' }, c: 'KSU', s: 'Civil + MEP', v: 'SAR 4.5M', y: '2022' },
+    { p: { en: 'Industrial Plant', ar: 'مصنع صناعي' }, c: 'SABIC', s: 'MEP + Fire', v: 'SAR 7.2M', y: '2023' },
+    { p: { en: 'Smart Building Design', ar: 'تصميم مبنى ذكي' }, c: 'ROSHN', s: 'Design + ELV', v: 'SAR 1.8M', y: '2024' },
+    { p: { en: 'Airport Terminal', ar: 'صالة مطار' }, c: 'Riyadh Air', s: 'Fit-out + HVAC', v: 'SAR 9.5M', y: '2026' },
+    { p: { en: 'Residential Compound', ar: 'مجمع سكني' }, c: 'Diriyah Gate', s: 'Civil + MEP', v: 'SAR 6.7M', y: '2025' },
+    { p: { en: 'Power Substation', ar: 'محطة كهرباء' }, c: 'SEC', s: 'Electrical', v: 'SAR 8.4M', y: '2023' },
+    { p: { en: 'Office Tower AMC', ar: 'صيانة برج مكاتب' }, c: 'Aramco', s: 'AMC (3 yrs)', v: 'SAR 2.2M', y: '2024' },
+    { p: { en: 'Shopping Mall', ar: 'مركز تجاري' }, c: 'GEA', s: 'Fit-out + Fire', v: 'SAR 3.1M', y: '2022' },
+    { p: { en: 'National Guard HQ', ar: 'مقر الحرس الوطني' }, c: 'SNG', s: 'MEP + IT', v: 'SAR 5.5M', y: '2024' },
+    { p: { en: 'Logistics Park', ar: 'متنزه لوجستي' }, c: 'MODON', s: 'Civil + Infra', v: 'SAR 7.8M', y: '2025' },
+    { p: { en: 'Railway Station', ar: 'محطة سكة حديد' }, c: 'Saudi Railway', s: 'MEP + ELV', v: 'SAR 4.9M', y: '2026' }
+  ];
+
+  const services = [
+    { icon: 'fa-bolt', num: '01', title: { en: 'MEP Solutions', ar: 'حلول الميكانيكا والكهرباء' }, desc: { en: 'Mechanical, electrical & plumbing design, installation and commissioning.', ar: 'تصميم وتركيب وتشغيل أنظمة الميكانيكا والكهرباء والسباكة.' }, points: [ { en: 'Electrical LV/MV distribution', ar: 'توزيع الكهرباء منخفض وعالي الجهد' }, { en: 'Plumbing & drainage systems', ar: 'أنظمة السباكة والصرف' }, { en: 'BMS & ELV integration', ar: 'تكامل أنظمة BMS و ELV' } ] },
+    { icon: 'fa-helmet-safety', num: '02', title: { en: 'Building Construction', ar: 'البناء والتشييد' }, desc: { en: 'Structural, concrete, infrastructure and finishing civil packages.', ar: 'حزم مدنية هيكلية وخرسانية للبنية التحتية والتشطيبات.' }, points: [ { en: 'Foundations & substructure', ar: 'الأساسات والهياكل السفلية' }, { en: 'Structural steel erection', ar: 'تركيب الهياكل الفولاذية' }, { en: 'Blockwork & wet finishes', ar: 'أعمال البلوك واللياسة' } ] },
+    { icon: 'fa-couch', num: '03', title: { en: 'Designing & Fit-out', ar: 'التصميم والتشطيبات' }, desc: { en: 'Premium commercial & residential interior fit-out and finishes.', ar: 'تصميم داخلي وتشطيبات متميزة للمشاريع التجارية والسكنية.' }, points: [ { en: 'Gypsum & false ceilings', ar: 'الجبس والأسقف المعلقة' }, { en: 'Flooring — marble, vinyl', ar: 'الأرضيات — رخام، فينيل' }, { en: 'Joinery & furniture supply', ar: 'النجارة وتوريد الأثاث' } ] },
+    { icon: 'fa-fire-extinguisher', num: '04', title: { en: 'Firefighting Systems', ar: 'مكافحة الحرائق' }, desc: { en: 'Sprinklers, pumps, alarms, suppression & FM200 systems.', ar: 'أنظمة الرشاشات والمضخات والإنذار والإخماد وأنظمة FM200.' }, points: [ { en: 'Wet & dry sprinklers', ar: 'رشاشات رطبة وجافة' }, { en: 'FM200 clean agent', ar: 'إخماد بـ FM200' }, { en: 'Civil Defense approved', ar: 'معتمد من الدفاع المدني' } ] },
+    { icon: 'fa-snowflake', num: '05', title: { en: 'HVAC Solutions', ar: 'أنظمة التكييف' }, desc: { en: 'Cooling systems engineered for the Saudi climate.', ar: 'أنظمة تبريد مصممة للمناخ السعودي.' }, points: [ { en: 'Central chillers', ar: 'مبردات مركزية' }, { en: 'VRF/VRV systems & AHUs', ar: 'أنظمة VRF/VRV و AHUs' }, { en: 'Ducting & cold rooms', ar: 'مجاري الهواء وغرف التبريد' } ] },
+    { icon: 'fa-video', num: '06', title: { en: 'CCTV & IT Infrastructure', ar: 'المراقبة وتقنية المعلومات' }, desc: { en: 'Comprehensive IT networking and advanced CCTV systems.', ar: 'شبكات تقنية معلومات شاملة وأنظمة مراقبة متقدمة.' }, points: [ { en: 'IP & Analog CCTV', ar: 'مراقبة IP وتماثيلية' }, { en: 'Structured cabling & servers', ar: 'كابلات منظمة وخوادم' }, { en: 'Access control & smart tech', ar: 'تحكم بالوصول وتقنية ذكية' } ] },
+    { icon: 'fa-broom', num: '07', title: { en: 'Cleaning Services', ar: 'خدمات التنظيف' }, desc: { en: 'Professional cleaning to maintain pristine environments.', ar: 'تنظيف احترافي للحفاظ على بيئات نقية.' }, points: [ { en: 'Janitorial & daily cleaning', ar: 'تنظيف يومي' }, { en: 'Facade & high-rise cleaning', ar: 'تنظيف الواجهات والمباني الشاهقة' }, { en: 'Marble polishing & pest control', ar: 'صقل الرخام ومكافحة الحشرات' } ] },
+    { icon: 'fa-screwdriver-wrench', num: '08', title: { en: 'AMC & O&M', ar: 'الصيانة والتشغيل' }, desc: { en: 'Annual maintenance contracts, FM and 24/7 emergency response.', ar: 'عقود صيانة سنوية وإدارة مرافق واستجابة طوارئ 24/7.' }, points: [ { en: 'Preventive & corrective', ar: 'وقائية وتصحيحية' }, { en: '24/7 emergency response', ar: 'استجابة طوارئ 24/7' }, { en: 'SLA dashboards & reporting', ar: 'لوحات SLA وتقارير' } ] }
+  ];
+
+  // ===== Inject Data =====
+  // Partners Marquee
+  const partnersMarquee = document.getElementById('partnersMarquee');
+  let partnersHTML = '';
+  for (let i = 0; i < 2; i++) {
+    partnersHTML += '<div class="marquee-content">';
+    partners.forEach(p => {
+      partnersHTML += `<div class="partner-card font-bold text-xl flex items-center gap-2" style="color: ${p.color};"><i class="fa-solid ${p.icon}"></i> <span>${p.name}</span></div>`;
+    });
+    partnersHTML += '</div>';
+  }
+  partnersMarquee.innerHTML = partnersHTML;
+
+  // Clients Logos with strong fallback
+  const clientsGrid = document.getElementById('clientsGrid');
+  let clientsHTML = '';
+  clients.forEach(c => {
+    const safeId = c.domain.replace(/\./g, '');
+    clientsHTML += `
+      <div class="glass-card rounded-2xl p-8 flex items-center justify-center h-32 reveal relative" id="client-${safeId}">
+        <div id="name-${safeId}" class="text-base font-bold text-[var(--muted)] hover:text-white transition text-center px-2">
+          ${c.name}
+        </div>
+        <img src="https://logo.clearbit.com/${c.domain}" alt="${c.name}" class="absolute max-h-16 max-w-[80%] object-contain opacity-70 hover:opacity-100 transition duration-300 bg-[var(--card)]" onerror="this.style.display='none';">
+      </div>
+    `;
+  });
+  clientsGrid.innerHTML = clientsHTML;
+
+  // Portfolio with fallback image
+  const portfolioGrid = document.getElementById('portfolioGrid');
+  let portfolioHTML = '';
+  portfolio.forEach(p => {
+    portfolioHTML += `
+      <div class="relative overflow-hidden rounded-2xl cursor-pointer group reveal">
+        <img src="${p.img}" alt="Project" class="w-full h-72 object-cover transition-transform duration-700 group-hover:scale-110" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=600&q=80';">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent p-6 flex flex-col justify-end">
+          <div class="text-xs text-[var(--accent-2)] uppercase tracking-widest mb-2">${p.tag}</div>
+          <h3 class="font-display font-bold text-xl" data-en="${p.title.en}" data-ar="${p.title.ar}">${p.title.en}</h3>
+        </div>
+      </div>
+    `;
+  });
+  portfolioGrid.innerHTML = portfolioHTML;
+
+  // Projects Table
+  const projectsTableEl = document.getElementById('projectsTable');
+  let projectsHTML = '';
+  projectsTable.forEach(p => {
+    projectsHTML += `
+      <tr class="border-b border-white/5 hover:bg-white/5 transition">
+        <td class="p-4 font-medium text-white" data-en="${p.p.en}" data-ar="${p.p.ar}">${p.p.en}</td>
+        <td class="p-4">${p.c}</td>
+        <td class="p-4">${p.s}</td>
+        <td class="p-4 text-[var(--accent-2)] font-bold">${p.v}</td>
+        <td class="p-4">${p.y}</td>
+      </tr>
+    `;
+  });
+  projectsTableEl.innerHTML = projectsHTML;
+
+  // Services
+  const servicesGrid = document.getElementById('servicesGrid');
+  let servicesHTML = '';
+  services.forEach(s => {
+    let pointsHTML = '';
+    s.points.forEach(pt => {
+      pointsHTML += `<li class="feature-line relative pl-5" data-en="${pt.en}" data-ar="${pt.ar}">${pt.en}</li>`;
+    });
+    servicesHTML += `
+      <div class="glass-card rounded-2xl p-7 reveal">
+        <div class="flex items-start justify-between mb-6">
+          <div class="w-14 h-14 rounded-xl bg-[var(--accent)]/10 text-[var(--accent-2)] flex items-center justify-center text-2xl"><i class="fa-solid ${s.icon} icon-anim"></i></div>
+          <span class="text-5xl font-display font-black text-white/5">${s.num}</span>
+        </div>
+        <h3 class="font-display font-bold text-xl mb-3" data-en="${s.title.en}" data-ar="${s.title.ar}">${s.title.en}</h3>
+        <p class="text-sm text-[var(--muted)] mb-5" data-en="${s.desc.en}" data-ar="${s.desc.ar}">${s.desc.en}</p>
+        <ul class="text-sm text-[var(--muted)] space-y-2">${pointsHTML}</ul>
+      </div>
+    `;
+  });
+  servicesGrid.innerHTML = servicesHTML;
+
+  // ===== Language Toggle =====
+  let currentLang = 'en';
+  function toggleLang() {
+    currentLang = currentLang === 'en' ? 'ar' : 'en';
+    document.documentElement.lang = currentLang;
+    document.documentElement.dir = currentLang === 'ar' ? 'rtl' : 'ltr';
+    document.body.classList.toggle('rtl', currentLang === 'ar');
+    document.querySelectorAll('[data-en]').forEach(el => {
+      const txt = currentLang === 'ar' ? el.getAttribute('data-ar') : el.getAttribute('data-en');
+      if (txt) el.innerText = txt;
+    });
+    document.querySelectorAll('#langBtn span, #langBtnMobile span').forEach(s => s.innerText = currentLang === 'ar' ? 'English' : 'العربية');
+    // Removed initChat() so we don't wipe the user's conversation history
+  }
+  document.getElementById('langBtn').addEventListener('click', toggleLang);
+  document.getElementById('langBtnMobile').addEventListener('click', toggleLang);
+
+  // Scroll Progress
+  window.addEventListener('scroll', () => {
+    document.getElementById('scrollProgress').style.width = ((document.documentElement.scrollTop / (document.documentElement.scrollHeight - document.documentElement.clientHeight)) * 100) + '%';
+  }, { passive: true });
+
+  // Mobile Menu
+  document.getElementById('menuBtn').addEventListener('click', () => document.getElementById('mobileMenu').classList.add('active'));
+  document.getElementById('closeMenu').addEventListener('click', () => document.getElementById('mobileMenu').classList.remove('active'));
+  document.querySelectorAll('.mobile-link').forEach(l => l.addEventListener('click', () => document.getElementById('mobileMenu').classList.remove('active')));
+
+  // Re-init Reveal Observer for newly injected elements
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in-view'); revealObserver.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+  // Active Nav Link
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.nav-link');
+  const navObserver = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        navLinks.forEach(l => l.classList.remove('active'));
+        const link = document.querySelector(`.nav-link[href="#${e.target.id}"]`);
+        if (link) link.classList.add('active');
+      }
+    });
+  }, { threshold: 0.3 });
+  sections.forEach(s => navObserver.observe(s));
+
+  // ===== HERO CINEMATIC DOUBLE-BUFFER BACKGROUND =====
+  const heroWrap = document.getElementById('home');
+  const heroBg1 = document.getElementById('heroBgImg1');
+  const heroBg2 = document.getElementById('heroBgImg2');
+  let activeImg = 1;
+  const heroFrames = document.querySelectorAll('.hero-frame');
+  let currentBg = heroBg1.src; // Track what is currently visible
+
+  function changeBg(newBg) {
+    if (currentBg === newBg) return; // Don't do anything if it's the same image
+
+    const preload = new Image();
+    preload.src = newBg;
+    
+    // onload fires even if cached in modern browsers using the Image() constructor
+    preload.onload = () => {
+      if (activeImg === 1) {
+        heroBg2.src = newBg;
+        heroBg1.style.opacity = '0';
+        heroBg2.style.opacity = '1';
+        activeImg = 2;
+      } else {
+        heroBg1.src = newBg;
+        heroBg2.style.opacity = '0';
+        heroBg1.style.opacity = '1';
+        activeImg = 1;
+      }
+      currentBg = newBg; // Update current background tracker
+    };
+  }
+
+  function updateHero() {
+    const rect = heroWrap.getBoundingClientRect();
+    const total = heroWrap.offsetHeight - window.innerHeight;
+    const scrolled = Math.max(0, -rect.top);
+    const p = Math.min(1, Math.max(0, scrolled / total));
+
+    const frameIndex = Math.min(5, Math.floor(p * 6));
+    heroFrames.forEach((frame, i) => {
+      if (i === frameIndex) {
+        if (!frame.classList.contains('active')) {
+          frame.classList.add('active');
+          const newBg = frame.getAttribute('data-bg');
+          if (newBg) {
+            changeBg(newBg);
+          }
+        }
+      } else {
+        frame.classList.remove('active');
+      }
+    });
+  }
+  window.addEventListener('scroll', updateHero, { passive: true });
+
+  // Particles
+  const canvas = document.getElementById('particle-canvas');
+  const ctx = canvas.getContext('2d');
+  let particles = [];
+  function resizeCanvas() { canvas.width = canvas.parentElement.offsetWidth; canvas.height = canvas.parentElement.offsetHeight; }
+  function initParticles() {
+    particles = [];
+    for (let i = 0; i < 50; i++) {
+      particles.push({ x: Math.random() * canvas.width, y: Math.random() * canvas.height, vx: (Math.random() - 0.5) * 0.3, vy: (Math.random() - 0.5) * 0.3, r: Math.random() * 1.5 + 0.5 });
+    }
+  }
+  resizeCanvas(); initParticles();
+  window.addEventListener('resize', () => { resizeCanvas(); initParticles(); });
+  function animateParticles() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    particles.forEach(p => {
+      p.x += p.vx; p.y += p.vy;
+      if (p.x < 0 || p.x > canvas.width) p.vx *= -1;
+      if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
+      ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2); ctx.fillStyle = 'rgba(139, 92, 246, 0.5)'; ctx.fill();
+    });
+    requestAnimationFrame(animateParticles);
+  }
+  animateParticles();
+
+  // Toast
+  const toast = document.getElementById('toast');
+  function showToast(msg) {
+    document.getElementById('toastMsg').textContent = msg;
+    toast.style.display = 'flex';
+    setTimeout(() => toast.style.display = 'none', 3000);
+  }
+  document.getElementById('contactForm').addEventListener('submit', (e) => {
+    e.preventDefault();
+    showToast(currentLang === 'ar' ? 'تم الإرسال بنجاح' : 'Enquiry submitted successfully');
+    e.target.reset();
+  });
+
+  // ====== STRONG AI CHATBOT ======
+  const chatBtn = document.getElementById('chatBtn');
+  const chatWindow = document.getElementById('chatWindow');
+  const closeChat = document.getElementById('closeChat');
+  const chatForm = document.getElementById('chatForm');
+  const chatInput = document.getElementById('chatInput');
+  const chatMessages = document.getElementById('chatMessages');
+
+  chatBtn.addEventListener('click', () => chatWindow.classList.toggle('active'));
+  closeChat.addEventListener('click', () => chatWindow.classList.remove('active'));
+
+  function initChat() {
+    chatMessages.innerHTML = '';
+    addMsg(currentLang === 'ar' ? 'مرحباً! أنا المساعد الذكي لشركة مارينا ورلد لينك. كيف يمكنني مساعدتك في مشروعك اليوم؟' : "Hello! I'm the Marina WorldLink AI assistant. How can I help you with your project today?", false);
+  }
+  initChat();
+
+  function addMsg(text, fromUser = false) {
+    const wrap = document.createElement('div');
+    wrap.className = 'flex ' + (fromUser ? 'justify-end' : '');
+    const bubble = document.createElement('div');
+    bubble.className = (fromUser ? 'bg-gradient-to-r from-[var(--accent)] to-[var(--blue)] text-white rounded-2xl rounded-tr-sm' : 'bg-white/5 border border-white/10 rounded-2xl rounded-tl-sm') + ' p-3 max-w-[80%] text-sm';
+    bubble.innerText = text;
+    wrap.appendChild(bubble);
+    chatMessages.appendChild(wrap);
+    chatMessages.scrollTop = chatMessages.scrollHeight;
+  }
+
+  function aiBotReply(userText) {
+    const t = userText.toLowerCase();
+    let reply = '';
+    const isAr = currentLang === 'ar';
+
+    if (t.includes('service') || t.includes('خدم')) {
+      reply = isAr ? 'نقدم 8 تخصصات رئيسية: الميكانيكا والكهرباء، البناء والتشييد، التصميم والتشطيبات، مكافحة الحرائق، أنظمة التكييف، المراقبة وتقنية المعلومات، التنظيف، وعقود الصيانة. أي خدمة تهمك؟' : 'We offer 8 core disciplines: MEP, Building Construction, Designing & Fit-out, Firefighting, HVAC, CCTV & IT, Cleaning, and AMC. Which service are you interested in?';
+    } else if (t.includes('price') || t.includes('cost') || t.includes('quote') || t.includes('تسعير') || t.includes('سعر')) {
+      reply = isAr ? 'تختلف الأسعار حسب نطاق العمل. هل يمكنك تزويدنا بنوع المشروع والموقع لنرتب لك عرض سعر مخصص؟ أو يمكنك ملء النموذج في صفحة الاتصال.' : 'Pricing depends on the project scope. Could you share the project type and location so we can arrange a custom quote? Alternatively, you can fill out the form on our contact page.';
+    } else if (t.includes('mep') || t.includes('ميكانيكا')) {
+      reply = isAr ? 'قسم الميكانيكا والكهرباء لدينا يتعامل مع التصميم والتركيب والتشغيل الكامل باستخدام BIM. هل لديك مشروع تجاري أم سكني؟' : 'Our MEP division handles full design, installation, and commissioning using BIM. Do you have a commercial or residential project?';
+    } else if (t.includes('amc') || t.includes('maint') || t.includes('صيانة')) {
+      reply = isAr ? 'عقودنا للصيانة السنوية (AMC) تشمل الصيانة الوقائية والطوارئ على مدار الساعة. هل ترغب في ترتيب مسح موقع لمرفقك؟' : 'Our AMC contracts cover 24/7 preventive and emergency maintenance. Would you like to arrange a site survey for your facility?';
+    } else if (t.includes('fire') || t.includes('حريق')) {
+      reply = isAr ? 'نقدم أنظمة مكافحة حرائق معتمدة من الدفاع المدني ومتوافقة مع NFPA. هل تحتاج إلى رشاشات أو إنذار أو إخماد؟' : 'We provide Civil Defense approved and NFPA compliant firefighting systems. Do you need sprinklers, alarms, or suppression systems?';
+    } else if (t.includes('hvac') || t.includes('تكييف')) {
+      reply = isAr ? 'نصمم أنظمة تكييف (HVAC) مصممة خصيصاً لتحمل المناخ السعودي القاسي. هل تحتاج إلى مبردات مركزية أم أنظمة VRF؟' : 'We engineer HVAC systems specifically designed to handle the extreme Saudi climate. Are you looking for central chillers or VRF systems?';
+    } else if (t.includes('cctv') || t.includes('it') || t.includes('مراقبة') || t.includes('تقنية')) {
+      reply = isAr ? 'نقدم حلول شاملة للمراقبة وتقنية المعلومات تشمل الكابلات المنظمة، غرف الخوادم، وأنظمة المراقبة الذكية. هل المشروع تجاري أم حكومي؟' : 'We provide comprehensive CCTV & IT solutions including structured cabling, server rooms, and smart surveillance systems. Is the project commercial or government?';
+    } else if (t.includes('clean') || t.includes('تنظيف')) {
+      reply = isAr ? 'خدمات التنظيف لدينا تشمل التنظيف اليومي، تنظيف الواجهات، وصقل الرخام. هل تحتاج إلى خدمة لمرفق تجاري أم سكني؟' : 'Our cleaning services include daily janitorial, facade cleaning, and marble polishing. Do you need service for a commercial or residential facility?';
+    } else if (t.includes('human') || t.includes('call') || t.includes('موظف') || t.includes('اتصال')) {
+      reply = isAr ? 'بالتأكيد! يمكنك التواصل مع فريقنا المباشر على الرقم +966 53 083 6711. فريقنا متاح 24/7.' : 'Sure! You can reach our human team directly at +966 53 083 6711. They are available 24/7.';
+    } else if (t.includes('location') || t.includes('office') || t.includes('موقع') || t.includes('عنوان')) {
+      reply = isAr ? 'مقرنا الرئيسي في الرياض، المملكة العربية السعودية، ولدينا مكاتب في دبي بالإمارات ومومباي بالهند.' : 'We are headquartered in Riyadh, KSA, with active offices in Dubai, UAE, and Mumbai, India.';
+    } else {
+      reply = isAr ? 'شكراً لتواصلك مع مارينا ورلد لينك. لمساعدتك بشكل أفضل، هل يمكنك توضيح ما إذا كان استفسارك يتعلق بالميكانيكا، التشطيبات، الصيانة، أو غيرها؟' : "Thank you for reaching out to Marina WorldLink. To assist you better, could you clarify if your inquiry is about MEP, Fit-out, AMC, or something else?";
+    }
+    setTimeout(() => addMsg(reply, false), 600);
+  }
+
+  chatForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const v = chatInput.value.trim();
+    if (!v) return;
+    addMsg(v, true);
+    chatInput.value = '';
+    aiBotReply(v);
+  });
+
+  document.querySelectorAll('.qr-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const v = btn.textContent.trim();
+      addMsg(v, true);
+      aiBotReply(v);
+    });
+  });
+</script>
+</body>
+</html>
